@@ -1,0 +1,27 @@
+{
+    "name": "Policy_Salomon",
+    "properties": {
+      "backupManagementType": "AzureIaasVM",
+      "workloadType": "VM",
+      "schedulePolicy": {
+        "schedulePolicyType": "SimpleSchedulePolicy",
+        "scheduleRunFrequency": "Daily",
+        "scheduleRunTimes": [
+          "2024-10-07T00:00:00Z"
+        ],
+        "timeZone": "UTC"
+      },
+      "retentionPolicy": {
+        "retentionPolicyType": "LongTermRetentionPolicy",
+        "dailySchedule": {
+          "retentionTimes": [
+            "2024-10-07T00:00:00Z"
+          ],
+          "retentionDuration": {
+            "count": 30,
+            "durationType": "Days"
+          }
+        }
+      }
+    }
+  }
